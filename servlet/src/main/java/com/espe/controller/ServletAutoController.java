@@ -56,6 +56,12 @@ public class ServletAutoController extends HttpServlet {
 
         RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
         rd.forward(request, response);**/
+
+        String opcion = request.getParameter("opcion");
+        if (opcion.equals("registro")){
+            RequestDispatcher rd = request.getRequestDispatcher("registro.jsp");
+            rd.forward(request, response);
+        }
     }
 
     public void destroy() {
