@@ -12,5 +12,23 @@
 </head>
 <body>
   <h1>Registrar un Auto</h1>
+    <form action="autoController" method="post">
+        <table>
+            <input type="hidden" name="opcion" value="crear">
+            <tr>
+                <td>Marca</td>
+                <td> <input type="text" name="marca"></td>
+            </tr>
+            <tr>
+                <td>Placa</td>
+                <td> <input type="text" name="placa"></td>
+            </tr>
+            <tr>
+                <td>Modelo</td>
+                <td> <input type="text" name="modelo"></td>
+            </tr>
+        </table>
+        <input type="submit" value="registro">
+    </form>
 </body>
 </html>

@@ -58,9 +58,37 @@ public class ServletAutoController extends HttpServlet {
         rd.forward(request, response);**/
 
         String opcion = request.getParameter("opcion");
+        IAutoDAO autoDAO = new AutoDaoImpl();
         if (opcion.equals("registro")){
             RequestDispatcher rd = request.getRequestDispatcher("registro.jsp");
             rd.forward(request, response);
+        } else if (opcion.equals("eliminar")) {
+            autoDAO.delete(request.getParameter("placa"));
+
+            List<Auto> lista = autoDAO.get();
+            request.setAttribute("autos", lista);
+            RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+            rd.forward(request, response);
+        }
+    }
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        IAutoDAO autoDAO = new AutoDaoImpl();
+        String opcion = req.getParameter("opcion");
+        if (opcion.equals("crear")){
+            Auto auto = new Auto();
+            auto.setMarca(req.getParameter("marca"));
+            auto.setPlaca(req.getParameter("placa"));
+            auto.setModelo(req.getParameter("modelo"));
+
+            autoDAO.add(auto);
+
+            List<Auto> lista = autoDAO.get();
+            req.setAttribute("autos", lista);
+            RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+            rd.forward(req, resp);
         }
     }
 

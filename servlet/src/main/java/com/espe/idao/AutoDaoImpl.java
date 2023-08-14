@@ -27,4 +27,9 @@ public class AutoDaoImpl implements IAutoDAO {
     public Auto getAuto(String placa) {
         return MemoryStore.getAuto(placa);
     }
+
+    @Override
+    public void delete(String placa) {
+        MemoryStore.deleteAuto(placa);
+    }
 }
