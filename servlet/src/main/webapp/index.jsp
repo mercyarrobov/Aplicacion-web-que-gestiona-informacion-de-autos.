@@ -13,6 +13,10 @@
         <th>Marca</th>
         <th>Placa</th>
         <th>Modelo</th>
+        <th>Cilindraje</th>
+        <th>Año</th>
+        <th>Consumo</th>
+
         <th colspan="2">Acciones</th>
     </tr>
     <c:forEach var="auto" items="${autos}">
@@ -20,6 +24,12 @@
             <td> <c:out value="${auto.marca}"></c:out> </td>
             <td> <c:out value="${auto.placa}"></c:out> </td>
             <td> <c:out value="${auto.modelo}"></c:out> </td>
+            <td> <c:out value="${auto.cilindraje}"></c:out> </td>
+            <td> <c:out value="${auto.anio}"></c:out> </td>
+            <td> <c:out value="${auto.cosumo}"></c:out> </td>
+
+
+
             <td> <a href="autoController?opcion=editar&placa=<c:out value="${auto.placa}"></c:out>">Editar</a></td>
             <td> <a href="autoController?opcion=eliminar&placa=<c:out value="${auto.placa}"></c:out>">Eliminar</a></td>
         </tr>

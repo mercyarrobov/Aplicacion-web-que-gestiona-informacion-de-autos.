@@ -82,6 +82,9 @@ public class ServletAutoController extends HttpServlet {
             auto.setMarca(req.getParameter("marca"));
             auto.setPlaca(req.getParameter("placa"));
             auto.setModelo(req.getParameter("modelo"));
+            auto.setMarca(req.getParameter("cilindraje"));
+            auto.setPlaca(req.getParameter("anio"));
+            auto.setModelo(req.getParameter("consumo"));
 
             autoDAO.add(auto);
 

@@ -8,7 +8,6 @@ import java.util.List;
 
 public class MemoryStore {
     private static HashMap<String, Auto> autos = new HashMap<>();
-
     //Añadir un auto
     public static void addAuto(Auto auto){
         String placa = auto.getPlaca();
@@ -18,7 +17,8 @@ public class MemoryStore {
         autos.put(placa, auto);
     }
     //Listar todos los autos
-    public static List<Auto> getAutos(){return new ArrayList<>(autos.values());
+    public static List<Auto> getAutos(){
+        return new ArrayList<>(autos.values());
     }
     //Obtener Auto
     public static Auto getAuto(String placa){

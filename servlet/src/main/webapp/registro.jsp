@@ -27,6 +27,23 @@
                 <td>Modelo</td>
                 <td> <input type="text" name="modelo"></td>
             </tr>
+
+            <tr>
+                <td>Cilindraje</td>
+                <td> <input type="text" name="cilindraje"></td>
+            </tr>
+
+            <tr>
+                <td>Año</td>
+                <td> <input type="text" name="anio"></td>
+            </tr>
+
+            <tr>
+                <td>Consumo</td>
+                <td> <input type="text" name="consumo"></td>
+            </tr>
+
+
         </table>
         <input type="submit" value="registro">
     </form>
