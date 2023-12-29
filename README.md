@@ -1,1 +1,1 @@
-Esta aplicación web rrealizada en java, permite la gestion de informacion de autos. La lógica implementada aborda aspectos clave de la funcionalidad de una aplicación que gestiona datos de autos, desde su registro hasta su eliminación.
+Esta aplicación web realizada en java, permite la gestion de informacion de autos. La lógica implementada aborda aspectos clave de la funcionalidad de una aplicación que gestiona datos de autos, desde su registro hasta su eliminación.
